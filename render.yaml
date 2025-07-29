@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: weather
+    env: python
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
